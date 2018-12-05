@@ -1,7 +1,6 @@
 package com.easysoft.dao.impl;
 
 import com.easysoft.dao.CommerceDao;
-    <<<<<<<HEAD
 import com.easysoft.dao.repository.*;
 import com.easysoft.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
