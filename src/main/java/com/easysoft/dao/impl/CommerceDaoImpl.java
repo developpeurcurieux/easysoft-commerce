@@ -1,14 +1,15 @@
 package com.easysoft.dao.impl;
 
 import com.easysoft.dao.CommerceDao;
-    <<<<<<<HEAD
 import com.easysoft.dao.repository.*;
 import com.easysoft.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
 
+@Repository
 public class CommerceDaoImpl implements CommerceDao {
     @Autowired
     private CategorieRepository categorieRepository;
