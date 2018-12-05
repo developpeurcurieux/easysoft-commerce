@@ -1,6 +1,7 @@
 package com.easysoft.dao.impl;
 
 import com.easysoft.dao.CommerceDao;
+    <<<<<<<HEAD
 import com.easysoft.dao.repository.*;
 import com.easysoft.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,25 +26,34 @@ public class CommerceDaoImpl implements CommerceDao {
     @Override
     public Categorie addCategorie(Categorie categorie) {
         return categorieRepository.save(categorie);
+
     }
 
     @Override
     public List<Categorie> listCategories() {
+
         return categorieRepository.findAll();
+
     }
 
     @Override
     public Categorie getCategorie(Long categorieId) {
+
         return categorieRepository.findById(categorieId).get();
+
     }
 
     @Override
     public void deleteCategorie(Long categorieId) {
+
         categorieRepository.deleteById(categorieId);
+
+
     }
 
     @Override
     public void updateCategorie(Categorie categorie) {
+
         categorieRepository.save(categorie);
     }
 
@@ -107,7 +117,7 @@ public class CommerceDaoImpl implements CommerceDao {
         commande.setDateCommande(new Date());
         commande.setItems(panier.getItems());
 
-        for(LigneCommande ligneCommande : panier.getItems()) {
+        for (LigneCommande ligneCommande : panier.getItems()) {
             ligneCommandeRepository.save(ligneCommande);
         }
 

@@ -18,8 +18,8 @@ public interface CommerceDao {
     public List<Produit> produitsSelected();
     public Produit getProduit(Long produitId);
     public void deleteProduit(Long produitId);
-    public void updateProduit(Produit produit);
 
+    public void updateProduit(Produit produit);
     public void ajouterUser(User user);
     public void attributerRole(Role role, Long userId);
 
