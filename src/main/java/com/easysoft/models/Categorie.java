@@ -1,5 +1,6 @@
 package com.easysoft.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -30,6 +31,7 @@ public class Categorie implements Serializable {
     private String nomPhoto;
 
     @OneToMany(mappedBy="categorie")
+    @JsonBackReference
     private Collection<Produit> produits;
 
     public Categorie(String nomCategorie, String description, byte[] photo, String nomPhoto) {

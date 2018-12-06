@@ -4,6 +4,8 @@ import com.easysoft.dao.CommerceDao;
 import com.easysoft.models.*;
 import com.easysoft.service.AdminCategories;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -70,8 +72,8 @@ public class CommerceServiceImpl implements AdminCategories {
     }
 
     @Override
-    public List<Produit> produitsParMotCle(String motCle) {
-        return dao.produitsByMotCle(motCle);
+    public Page<Produit> produitsParMotCle(String motCle, Pageable pageable) {
+        return dao.produitsByMotCle(motCle, pageable);
     }
 
     @Override

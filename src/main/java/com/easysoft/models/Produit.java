@@ -1,5 +1,6 @@
 package com.easysoft.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +27,7 @@ public class Produit implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "ID_CAT")
+    @JsonManagedReference
     private Categorie categorie;
 
     public Produit(String designation, String description, double prix, boolean selected, String photo, int quantite) {

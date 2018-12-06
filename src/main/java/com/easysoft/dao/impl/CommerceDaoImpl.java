@@ -4,6 +4,8 @@ import com.easysoft.dao.CommerceDao;
 import com.easysoft.dao.repository.*;
 import com.easysoft.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
@@ -71,8 +73,8 @@ public class CommerceDaoImpl implements CommerceDao {
     }
 
     @Override
-    public List<Produit> produitsByMotCle(String motCle) {
-        return produitRepository.findByMotCle(motCle);
+    public Page<Produit> produitsByMotCle(String motCle, Pageable pageable) {
+        return produitRepository.findByMotCle(motCle, pageable);
     }
 
     @Override

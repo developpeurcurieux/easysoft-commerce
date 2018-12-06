@@ -1,6 +1,8 @@
 package com.easysoft.dao;
 
 import com.easysoft.models.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ public interface CommerceDao {
 
     public Produit addProduit(Produit produit, Long categorieId);
     public List<Produit> listProduits();
-    public List<Produit> produitsByMotCle(String motCle);
+    public Page<Produit> produitsByMotCle(String motCle, Pageable pageable);
     public List<Produit> produitsByCategorie(Long categorieId);
     public List<Produit> produitsSelected();
     public Produit getProduit(Long produitId);
