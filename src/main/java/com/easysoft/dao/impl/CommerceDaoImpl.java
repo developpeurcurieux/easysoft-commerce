@@ -57,7 +57,9 @@ public class CommerceDaoImpl implements CommerceDao {
     }
 
     @Override
-    public Produit addProduit(Produit produit) {
+    public Produit addProduit(Produit produit, Long categorieId) {
+        Categorie categorie = categorieRepository.findById(categorieId).get();
+        produit.setCategorie(categorie);
         return produitRepository.save(produit);
     }
 

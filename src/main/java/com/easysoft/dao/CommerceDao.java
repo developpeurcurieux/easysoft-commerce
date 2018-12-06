@@ -11,7 +11,7 @@ public interface CommerceDao {
     public void deleteCategorie(Long categorieId);
     public void updateCategorie(Categorie categorie);
 
-    public Produit addProduit(Produit produit);
+    public Produit addProduit(Produit produit, Long categorieId);
     public List<Produit> listProduits();
     public List<Produit> produitsByMotCle(String motCle);
     public List<Produit> produitsByCategorie(Long categorieId);

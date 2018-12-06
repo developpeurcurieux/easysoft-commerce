@@ -12,7 +12,7 @@ public interface Internaute {
     public List<Produit> produitsParMotCle(String motCle);
     public List<Produit> produitsParCategorie(Long categorieId);
     public List<Produit> produitsSelectionnes();
-    public Produit getProduit(Long porduitId);
+    public Produit getProduit(Long produitId);
 
     public Commande enregistrerCommande(Panier panier, Client client);
 }
