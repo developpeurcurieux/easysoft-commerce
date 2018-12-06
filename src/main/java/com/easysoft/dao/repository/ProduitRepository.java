@@ -12,7 +12,7 @@ public interface ProduitRepository extends JpaRepository<Produit, Long> {
     public List<Produit> findByMotCle(@Param("x") String motCle);
 
     @Query("select p from Produit p where p.categorie.categorieId = :x")
-    public List<Produit> findByCategorie(Long categorieId);
+    public List<Produit> findByCategorie(@Param("x") Long categorieId);
 
     @Query("select p from Produit p where p.selected = true")
     public List<Produit> findSelected();
