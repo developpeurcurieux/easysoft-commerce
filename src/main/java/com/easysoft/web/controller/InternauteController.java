@@ -42,4 +42,10 @@ public class InternauteController {
         return metier.produitsParMotCle("%" + motCle + "%", PageRequest.of(page, size));
     }
 
+    @GetMapping("/produitsParCategorie/{id}")
+    public List<Produit> produitsParCategorie(@PathVariable("id") Long categorieId) {
+        return metier.produitsParCategorie(categorieId);
+    }
+
+
 }

@@ -34,14 +34,25 @@ public class EasyCommerceApplication implements CommandLineRunner {
 		p01.setPhoto("dellXPS.jpg");
 		p01.setQuantite(12);
 
+		Produit p02 = new Produit();
+		p02.setDesignation("Imprimante XPS13");
+		p02.setDescription("Imprimante pour Dev");
+		p02.setPrix(200);
+		p02.setSelected(false);
+		p02.setPhoto("dellXPS.jpg");
+		p02.setQuantite(50);
+
+
+
 		metier.addCategorie(c02);
 		metier.addCategorie(c01);
 		metier.addCategorie(c03);
 
 
 		metier.addProduit(p01, c01.getCategorieId());
+		metier.addProduit(p02, c02.getCategorieId());
 
 		//System.out.println(metier.getCategorie(c01.getIdCategorie()));
-		Produit p02 = metier.getProduit(p01.getProduitId());
+		//Produit p02 = metier.getProduit(p01.getProduitId());
 	}
 }
